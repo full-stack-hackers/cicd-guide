@@ -12,4 +12,5 @@ Use this repo as an example or guide to deploy your node.js application to a Dig
 
 ## Tooling
 
+* [git](https://git-scm.com/)
 * [express-generator](https://expressjs.com/en/starter/generator.html)
