@@ -9,6 +9,7 @@ Use this repo as an example or guide to deploy your node.js application to a Dig
 
 * [01 - Set up repo](https://github.com/full-stack-hackers/digoc-cicd-node/)
 * [02 - Generate express app](https://github.com/full-stack-hackers/digoc-cicd-node/)
+* [03 - Add some mock tests](https://github.com/full-stack-hackers/digoc-cicd-node/blob/03-testing/GUIDE.md)
 
 ## Tooling
 
