@@ -13,6 +13,8 @@ Use this repo as an example or guide to deploy your node.js application to a Dig
 
 ## Tooling
 
+* (Mac OS) [homebrew](https://brew.sh/)
 * [git](https://git-scm.com/)
 * [github](https://guides.github.com/activities/hello-world/)
+* [Node.js](https://nodejs.org/en/)
 * [express-generator](https://expressjs.com/en/starter/generator.html)
