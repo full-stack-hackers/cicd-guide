@@ -1,3 +1,9 @@
+# Intialize
+
+## Previous
+
+[Overview - README](https://github.com/full-stack-hackers/digoc-cicd-node/blob/master/README.md)
+
 ## Start from GitHub
 
 The cleanest way to start your project is to initialize the repo from GitHub. Head there, and select "New Repository." Then give it a name, select a license, give it a good description, initialize with a README, and initialize with the Node .gitignore. Hit create
