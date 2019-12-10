@@ -1,8 +1,8 @@
 
 ## Previous
 
-[02 - Generate Express App](https://github.com/full-stack-hackers/digoc-cicd-node/blob/02-express/GUIDE.md)
+[03 - Add some mock tests](https://github.com/full-stack-hackers/digoc-cicd-node/blob/03-testing/GUIDE.md)
 
 ## Next
 
-[04 - ??](https://github.com/full-stack-hackers/digoc-cicd-node)
+[05 - Deploy on Digital Ocean](https://github.com/full-stack-hackers/digoc-cicd-node/blob/05-deploy/GUIDE.md)
