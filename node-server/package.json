@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "DEBUG=app:* nodemon -r dotenv/config bin/www dotenv_config_path=conf/.env"
+    "start": "nodemon -r dotenv/config bin/www dotenv_config_path=conf/.env",
+    "test": "mocha"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -14,5 +15,8 @@
     "http-errors": "~1.6.3",
     "nodemon": "^2.0.1",
     "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "mocha": "^6.2.2"
   }
 }

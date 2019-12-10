@@ -12,7 +12,43 @@ as many tests as you like, but we will keep it simple to move on to the meat of 
 
 ## Adding Tests
 
+To run our tests, we are going to use the oh-so-popular [`mocha`](https://mochajs.org/) library. Let's go ahead and start by installing it as a dev dependency for our project. 
 
+```bash
+npm i --save-dev mocha
+```
+
+Next, in the root of our `node-server`, we will create a `test/` directory.
+
+```bash
+mkdir test
+```
+
+And in that folder, create a `test.js` file.
+
+```bash
+touch test.js
+```
+
+Now we can add a classical example of a test, just to *test* (haha) that `mocha` is working. In `test.js`, paste in:
+
+```javascript
+var assert = require('assert');
+
+describe('Array', function() {
+  describe('#indexOf()', function() {
+    it('should return -1 when the value is not present', function() {
+      assert.equal([1, 2, 3].indexOf(4), -1);
+    });
+  });
+});
+```
+
+Now in our `package.json`, we will add a new script:
+
+```json
+"test": "mocha"
+```
 
 ## Next
 
