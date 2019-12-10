@@ -50,6 +50,14 @@ Now in our `package.json`, we will add a new script:
 "test": "mocha"
 ```
 
+Now back in our terminal we can run `npm test`, and see our tests pass.
+
+## Real API Tests
+
+Now that we have mocha set up and some demo tests running successfully, let's add some real tests to our server.
+
+
+
 ## Next
 
 [04 - CircleCI](https://github.com/full-stack-hackers/digoc-cicd-node/blob/04-circleci/GUIDE.md)
