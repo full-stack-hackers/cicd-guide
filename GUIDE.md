@@ -1,8 +1,8 @@
 
 ## Previous
 
-[02 - Generate Express App](https://github.com/full-stack-hackers/digoc-cicd-node/blob/02-express/GUIDE.md)
+[04 - Continuous Integration with CircleCI](https://github.com/full-stack-hackers/digoc-cicd-node/blob/04-circleci/GUIDE.md)
 
 ## Next
 
-[04 - ??](https://github.com/full-stack-hackers/digoc-cicd-node)
+[06 - Continuous Deployment](https://github.com/full-stack-hackers/digoc-cicd-node/blob/06-continuous-deployment/GUIDE.md)
