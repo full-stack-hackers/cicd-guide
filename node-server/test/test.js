@@ -1,9 +1,17 @@
-var assert = require('assert');
+const chai = require('chai');
+const chaiHttp = require('chai-http');
+const server = require('../app');
 
-describe('Array', function() {
-  describe('#indexOf()', function() {
-    it('should return -1 when the value is not present', function() {
-      assert.equal([1, 2, 3].indexOf(4), -1);
+const should = chai.should();
+chai.use(chaiHttp)
+
+describe('API Tests', () => {
+  describe('/GET index route', () => {
+    it('Should return successfully', (done) => {
+      chai.request(server).get('/').end((err, res) => {
+        res.should.have.status(200);
+        done();
+      })
     });
   });
 });
