@@ -10,7 +10,9 @@ Testing is important to every real project. And while this is no real-world proj
 our continuous integration. Most developers think of automated testing and building when they think of continuous integration. So that is exactly what we are going to do. Feel free to add 
 as many tests as you like, but we will keep it simple to move on to the meat of this project.
 
-## 
+## Adding Tests
+
+
 
 ## Next
 
