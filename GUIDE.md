@@ -1,8 +1,4 @@
 
 ## Previous
 
-[02 - Generate Express App](https://github.com/full-stack-hackers/digoc-cicd-node/blob/02-express/GUIDE.md)
-
-## Next
-
-[04 - ??](https://github.com/full-stack-hackers/digoc-cicd-node)
+[05 - Deploy on Digital Ocean](https://github.com/full-stack-hackers/digoc-cicd-node/blob/05-deploy/GUIDE.md)
