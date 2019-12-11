@@ -21,7 +21,7 @@ adduser circleci_guy
 This will prompt you to set the new user's passphrase, as well as other info. Next, we need to give this new user `sudo` privileges. 
 
 ```bash
-usermod -aG sudo sammy
+usermod -aG sudo circleci_guy
 ```
 
 ## Generate SSH Keys
@@ -43,13 +43,13 @@ id_rsa_circleci  id_rsa_circleci.pub
 The first file has your **private key**, and the second one has your **public key**, hence the `.pub` extension. The public key needs to be added to a `~/.ssh/authorized_users` file, so if you don't have one already, run
 
 ```bash
-touch ~/.ssh/authorized_users
+touch ~/.ssh/authorized_keys
 ```
 
 Then copy your public key here by appending it with the `cat` command.
 
 ```bash
-cat ~/.ssh/id_rsa_circleci.pub >> ~/.ssh/authorized_users
+cat ~/.ssh/id_rsa_circleci.pub >> ~/.ssh/authorized_keys
 ```
 
 Now, `cat` out the private key and highlight and copy it. Hold on to this, we will need it to add to CircleCI
@@ -58,8 +58,27 @@ Now, `cat` out the private key and highlight and copy it. Hold on to this, we wi
 cat ~/.ssh/id_rsa_circleci
 ```
 
+Last thing you will need to do is enable your new user to run a server on PORT 80, which is a protected port. Run the following:
+
+```bash
+sudo setcap 'cap_net_bind_service=+ep' /usr/bin/node
+```
+
 ## Store Private Key 
 
 Head on over to CircleCI and naviagte to your project settings. Go to SSH Permissions. Click "Add SSH Key", and paste the private key you copied into the large box. If you have no other keys, you are fine to leave the hostname field empty.
 
 ![image](https://user-images.githubusercontent.com/31779571/70587331-aa561000-1b97-11ea-8ae0-266bd6a810d6.png)
+
+## Add deploy step to `.circleci/config.yml`
+
+As a final run step add the following to your config file:
+
+```yaml
+- run:
+    name: deploy
+    command: |
+      ssh -o "StrictHostKeyChecking no" circleci_guy@64.225.0.240 "cd ~/app/node-server; git pull; npm i; npm start"
+```
+
+Then, commit and push. And if all goes well, you should see your tests run and your app get deployed to your Digital Ocean droplet automatically. Congratualations on getting CI/CD set up for your project!
