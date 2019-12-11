@@ -36,4 +36,4 @@ jobs:
       - run:
           name: deploy
           command: |
-            ssh -o "StrictHostKeyChecking no" circleci_guy@167.71.240.12 "cd ~/app/node-server; git pull; npm i; npm start"
+            ssh -o "StrictHostKeyChecking no" circleci_guy@167.71.240.12 "cd ~/app/node-server; git pull; npm i; npm start; exit;"
