@@ -25,3 +25,7 @@ Use this repo as an example or guide to deploy your node.js application to a Dig
 * [PM2](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/)
 * [dotenv](https://www.npmjs.com/package/dotenv)
 * [CircleCI](https://circleci.com/)
+
+## Credits
+
+* Thanks for all the help: https://stackoverflow.com/
