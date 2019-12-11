@@ -37,9 +37,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-
-// app.listen(process.env.PORT, () => {
-//   serverLog(`App running on port ${process.env.PORT}`)
-// })
-
-
