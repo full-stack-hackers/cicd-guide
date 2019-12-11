@@ -58,7 +58,9 @@ jobs:
 
 This script will tell CircleCI which version of node to use, install our dependencies (with caching), and then run our tests. Save, and push your code to github to see what it looks like! If your code does not automatically run, you may need to click on "Add projects", and find the "Start Building" at the final prompt. Click this, and then from now on, your tests should run automatically. You should end up seeing something like:
 
+![image](https://user-images.githubusercontent.com/31779571/70581103-0e6ed900-1b84-11ea-996a-e7f4068fde64.png)
 
+Now that we have tested our app works, let's deploy to production!
 
 ## Next
 
