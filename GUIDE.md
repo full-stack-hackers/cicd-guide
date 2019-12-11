@@ -39,8 +39,8 @@ jobs:
             - v1-dependencies-
 
       - run:
-        name: install dependencies
-        command: npm install
+          name: install dependencies
+          command: npm install
 
       - save_cache:
           paths:
@@ -48,8 +48,8 @@ jobs:
           key: v1-dependencies-{{ checksum "package.json" }}
 
       - run:
-        name: run tests
-        command: npm test
+          name: run tests
+          command: npm test
 ```
 
 This script will tell CircleCI which version of node to use, install our dependencies (with caching), and then run our tests. Save, and push your code to github to see what it looks like! If your code does not automatically run, you may need to click on "Add projects", and find the "Start Building" at the final prompt. Click this, and then from now on, your tests should run automatically. You should end up seeing something like:
