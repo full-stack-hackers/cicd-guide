@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 
 const routes = require('./conf/routes');
-const { requestLog } = require('./conf/loggers');
+const { requestLog, serverLog } = require('./conf/loggers');
 
 var app = express();
 
@@ -37,3 +37,9 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+// app.listen(process.env.PORT, () => {
+//   serverLog(`App running on port ${process.env.PORT}`)
+// })
+
+
