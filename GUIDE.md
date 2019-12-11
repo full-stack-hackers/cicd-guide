@@ -2,7 +2,7 @@
 
 ## Previous
 
-[02 - Generate Express App](https://github.com/full-stack-hackers/digoc-cicd-node/blob/02-express/GUIDE.md)
+[02 - Generate Express App](https://github.com/full-stack-hackers/cicd-guide/blob/02-express/GUIDE.md)
 
 ## Why Tests?
 
@@ -92,4 +92,4 @@ Great, we should now be able to run `npm test` again, and see our tests run succ
 
 ## Next
 
-[04 - CircleCI](https://github.com/full-stack-hackers/digoc-cicd-node/blob/04-circleci/GUIDE.md)
+[04 - CircleCI](https://github.com/full-stack-hackers/cicd-guide/blob/04-circleci/GUIDE.md)
