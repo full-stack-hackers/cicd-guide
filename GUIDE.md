@@ -106,3 +106,5 @@ Then change our deploy script to now use PM2:
 ```
 
 Then, commit and push. And if all goes well, you should see your tests run and your app get deployed to your Digital Ocean droplet automatically. Congratualations on getting CI/CD set up for your project!
+
+Go ahead and make a change in `views/index.pug`, and save and commit it. Then push and see your changes automatically deployed.
