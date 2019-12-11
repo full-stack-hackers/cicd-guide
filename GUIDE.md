@@ -46,6 +46,10 @@ Then you can create a domain in Digital Ocean, and add it to your project. You c
 
 Now you should be able to access your app at your custom domain! I'm sure that was a lot of work and possibly frustration though, so the next step will be to automate the deployment as well!
 
+## HTTPS
+
+> If you need to server over https, for example, using a `.dev` domain, follow this guide to set up nginx as a reverse proxy for your node app: https://lengstorf.com/deploy-nodejs-ssl-digitalocean/
+
 ## Next
 
 [06 - Continuous Deployment](https://github.com/full-stack-hackers/cicd-guide/blob/06-continuous-deployment/GUIDE.md)
