@@ -21,7 +21,7 @@ Once you are in, go ahead and clone your repo
 git clone https://github.com/full-stack-hackers/cicd-guide
 ```
 
-Next, fill in your environment variables. Navigate into your `conf/` folder, and copy the `.sample-env`, then open it in vim and fill in the appropriate values. Now you can go into your project and run your app.
+Next, fill in your environment variables. **Make sure to use PORT="80", as this is the default port DigitalOcean uses". Navigate into your `conf/` folder, and copy the `.sample-env`, then open it in vim and fill in the appropriate values. Now you can go into your project and run your app.
 
 ```bash
 cd cicd-guide
@@ -42,7 +42,9 @@ ns2.digitalocean.com
 ns3.digitalocean.com
 ```
 
-Then you can add a domain, add it to a project, and add it to a droplet.
+Then you can create a domain in Digital Ocean, and add it to your project. You can then manage it, and point it to the IP address of your droplet. I pointed my domain, `cicd-demo.full-stack-hackers.dev` -> `64.225.0.240`.
+
+Now you should be able to access your app at your custom domain! I'm sure that was a lot of work and possibly frustration though, so the next step will be to automate the deployment as well!
 
 ## Next
 
