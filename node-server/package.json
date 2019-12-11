@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon -r dotenv/config bin/www dotenv_config_path=conf/.env"
+    "start": "nodemon -r dotenv/config ./bin/www dotenv_config_path=conf/.env"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
