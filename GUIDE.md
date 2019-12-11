@@ -1,4 +1,64 @@
+# Continuous Deployment
+
+Almost there! Lets automate that deployment for you!
 
 ## Previous
 
 [05 - Deploy on Digital Ocean](https://github.com/full-stack-hackers/cicd-guide/blob/05-deploy/GUIDE.md)
+
+## Server SSH User
+
+The idea here is that we will do exactly what we just did, but automated. We will ssh into our server, pull the changes (after successful CircleCI tests) and, start our server. In order to do so, we need a SSH user on our server. So let's log into the console and do that.
+
+> Do not just use your root user. Use another existing user, or follow along to create one
+
+Either load the console, or ssh into the server as root. Then run
+
+```bash
+adduser circleci_guy
+```
+
+This will prompt you to set the new user's passphrase, as well as other info. Next, we need to give this new user `sudo` privileges. 
+
+```bash
+usermod -aG sudo sammy
+```
+
+## Generate SSH Keys
+
+Now that we have this user, CircleCI will need SSH keys to work with it, since it cannot enter a password. SSH in as your new user on CircleCI and create your keys with:
+
+```bash
+ssh-keygen -m PEM -t rsa -f ~/.ssh/id_rsa_circleci -C "circleci"
+```
+
+When it prompts you for a passphrase, do not enter one. Just press enter. **CircleCI cannot use password encrypted SSH Keys**
+
+Notice now if you `ls ~/.ssh`, you will have
+
+```bash
+id_rsa_circleci  id_rsa_circleci.pub
+```
+
+The first file has your **private key**, and the second one has your **public key**, hence the `.pub` extension. The public key needs to be added to a `~/.ssh/authorized_users` file, so if you don't have one already, run
+
+```bash
+touch ~/.ssh/authorized_users
+```
+
+Then copy your public key here by appending it with the `cat` command.
+
+```bash
+cat ~/.ssh/id_rsa_circleci.pub >> ~/.ssh/authorized_users
+```
+
+Now, `cat` out the private key and highlight and copy it. Hold on to this, we will need it to add to CircleCI
+
+```bash
+cat ~/.ssh/id_rsa_circleci
+```
+
+## Store Private Key 
+
+Head on over to CircleCI and naviagte to your project settings. Go to SSH Permissions. Click "Add SSH Key", and paste the private key you copied into the large box. If you have no other keys, you are fine to leave the hostname field empty.
+

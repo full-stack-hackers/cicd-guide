@@ -1,0 +1,24 @@
+{
+  "name": "node-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nodemon -r dotenv/config ./bin/www dotenv_config_path=conf/.env",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "easy-log": "^0.1.1",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "nodemon": "^2.0.1",
+    "pug": "2.0.0-beta11"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.2"
+  }
+}
