@@ -36,4 +36,4 @@ jobs:
       - run:
           name: deploy
           command: |
-            ssh -o "StrictHostKeyChecking no" circleci_guy@64.225.0.240 "echo hello"
+            ssh -o "StrictHostKeyChecking no" circleci_guy@64.225.0.240 "touch hello.txt"
