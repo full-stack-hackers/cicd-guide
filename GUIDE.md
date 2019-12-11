@@ -78,7 +78,31 @@ As a final run step add the following to your config file:
 - run:
     name: deploy
     command: |
-      ssh -o "StrictHostKeyChecking no" circleci_guy@64.225.0.240 "cd ~/app/node-server; git pull; npm i; npm start"
+      ssh -o "StrictHostKeyChecking no" circleci_guy@167.71.240.12 "cd ~/app/node-server; git pull; npm i; npm start"
+```
+
+## PM2
+
+This works, however, our CirclCI build will just stay connected to Digital Ocean. I am sure there are many ways around this, but I used PM2, which is built into the Node droplet. All we need to do is move our `.sample-env` and `.env` to the root of `node-server`, and add a config file for PM2 in the root of `node-server`.
+
+**pm2.config.js**
+```javascript
+module.exports = {
+  apps : [{
+    name      : 'CICD Demo',
+    script    : './bin/www',
+    node_args : '-r dotenv/config',
+  }],
+}
+```
+
+Then change our deploy script to now use PM2:
+
+```yaml
+- run:
+    name: deploy
+    command: |
+      ssh -o "StrictHostKeyChecking no" circleci_guy@167.71.240.12 "cd ~/app/node-server; git pull; npm i; pm2 start pm2.config.js"
 ```
 
 Then, commit and push. And if all goes well, you should see your tests run and your app get deployed to your Digital Ocean droplet automatically. Congratualations on getting CI/CD set up for your project!
