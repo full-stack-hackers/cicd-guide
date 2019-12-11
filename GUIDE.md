@@ -62,3 +62,4 @@ cat ~/.ssh/id_rsa_circleci
 
 Head on over to CircleCI and naviagte to your project settings. Go to SSH Permissions. Click "Add SSH Key", and paste the private key you copied into the large box. If you have no other keys, you are fine to leave the hostname field empty.
 
+![image](https://user-images.githubusercontent.com/31779571/70587331-aa561000-1b97-11ea-8ae0-266bd6a810d6.png)
