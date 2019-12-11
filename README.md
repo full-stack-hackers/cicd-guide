@@ -21,3 +21,7 @@ Use this repo as an example or guide to deploy your node.js application to a Dig
 * [github](https://guides.github.com/activities/hello-world/)
 * [Node.js](https://nodejs.org/en/)
 * [express-generator](https://expressjs.com/en/starter/generator.html)
+* [digital ocean](https://cloud.digitalocean.com/)
+* [PM2](https://pm2.keymetrics.io/docs/usage/pm2-doc-single-page/)
+* [dotenv](https://www.npmjs.com/package/dotenv)
+* [CircleCI](https://circleci.com/)
