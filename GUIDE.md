@@ -1,7 +1,7 @@
 
 ## Previous
 
-[03 - Add some mock tests](https://github.com/full-stack-hackers/digoc-cicd-node/blob/03-testing/GUIDE.md)
+[03 - Add some mock tests](https://github.com/full-stack-hackers/cicd-guide/blob/03-testing/GUIDE.md)
 
 ## Automation
 
@@ -64,4 +64,4 @@ Now that we have tested our app works, let's deploy to production!
 
 ## Next
 
-[05 - Deploy on Digital Ocean](https://github.com/full-stack-hackers/digoc-cicd-node/blob/05-deploy/GUIDE.md)
+[05 - Deploy on Digital Ocean](https://github.com/full-stack-hackers/cicd-guide/blob/05-deploy/GUIDE.md)
