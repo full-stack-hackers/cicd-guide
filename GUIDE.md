@@ -2,7 +2,7 @@
 
 ## Previous
 
-[Overview - README](https://github.com/full-stack-hackers/digoc-cicd-node/blob/master/README.md)
+[Overview - README](https://github.com/full-stack-hackers/cicd-guide)
 
 ## Start from GitHub
 
@@ -18,4 +18,4 @@ Install [Node.js](https://nodejs.org/en/). Follow the directions for your OS. If
 
 ## Next
 
-[02 - Generate Express App](https://github.com/full-stack-hackers/digoc-cicd-node/blob/02-express/GUIDE.md)
+[02 - Generate Express App](https://github.com/full-stack-hackers/cicd-guide/blob/02-express/GUIDE.md)
