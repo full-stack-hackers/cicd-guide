@@ -7,12 +7,12 @@ Use this repo as an example or guide to deploy your node.js application to a Dig
 
 ## Steps
 
-* [01 - Set up repo](https://github.com/full-stack-hackers/digoc-cicd-node/blob/01-setup/GUIDE.md)
-* [02 - Generate express app](https://github.com/full-stack-hackers/digoc-cicd-node/blob/02-express/GUIDE.md)
-* [03 - Add some mock tests](https://github.com/full-stack-hackers/digoc-cicd-node/blob/03-testing/GUIDE.md)
-* [04 - Continuous Integration with CircleCI](https://github.com/full-stack-hackers/digoc-cicd-node/blob/04-circleci/GUIDE.md)
-* [05 - Deploy on Digital Ocean](https://github.com/full-stack-hackers/digoc-cicd-node/blob/05-deploy/GUIDE.md)
-* [06 - Continuous Deployment](https://github.com/full-stack-hackers/digoc-cicd-node/blob/06-continuous-deployment/GUIDE.md)
+* [01 - Set up repo](https://github.com/full-stack-hackers/cicd-guide/blob/01-setup/GUIDE.md)
+* [02 - Generate express app](https://github.com/full-stack-hackers/cicd-guide/blob/02-express/GUIDE.md)
+* [03 - Add some mock tests](https://github.com/full-stack-hackers/cicd-guide/blob/03-testing/GUIDE.md)
+* [04 - Continuous Integration with CircleCI](https://github.com/full-stack-hackers/cicd-guide/blob/04-circleci/GUIDE.md)
+* [05 - Deploy on Digital Ocean](https://github.com/full-stack-hackers/cicd-guide/blob/05-deploy/GUIDE.md)
+* [06 - Continuous Deployment](https://github.com/full-stack-hackers/cicd-guide/blob/06-continuous-deployment/GUIDE.md)
 
 ## Tooling
 
