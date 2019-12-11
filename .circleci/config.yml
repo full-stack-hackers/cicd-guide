@@ -20,7 +20,9 @@ jobs:
 
       - run:
           name: install dependencies
-          command: npm install
+          command: >
+            cd node-server/
+            npm install
 
       - save_cache:
           paths:
