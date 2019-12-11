@@ -52,7 +52,9 @@ jobs:
         command: npm test
 ```
 
-This script will tell CircleCI which version of node to use, install our dependencies (with caching), and then run our tests. Save, and push your code to github to see what it looks like! 
+This script will tell CircleCI which version of node to use, install our dependencies (with caching), and then run our tests. Save, and push your code to github to see what it looks like! If your code does not automatically run, you may need to click on "Add projects", and find the "Start Building" at the final prompt. Click this, and then from now on, your tests should run automatically. You should end up seeing something like:
+
+
 
 ## Next
 
