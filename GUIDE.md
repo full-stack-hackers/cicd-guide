@@ -3,6 +3,10 @@
 
 [04 - Continuous Integration with CircleCI](https://github.com/full-stack-hackers/cicd-guide/blob/04-circleci/GUIDE.md)
 
+## HTTPS
+
+> If you need to server over https, for example, using a `.dev` domain, follow this guide to set up nginx as a reverse proxy for your node app: https://lengstorf.com/deploy-nodejs-ssl-digitalocean/
+
 ## Deployment
 
 You have an amazing app, but how do you show it off? You will need to host it somewhere! These days you have many options, but one of the easiest and cheapest is Digital Ocean. It is what we will use here. Go ahead and sign up for an account (I just sign up with GitHub), create a project, and create a droplet and add it to that project. For example, I will create a project called full-stack-hackers, and a droplet called cicd-demo.
@@ -46,9 +50,6 @@ Then you can create a domain in Digital Ocean, and add it to your project. You c
 
 Now you should be able to access your app at your custom domain! I'm sure that was a lot of work and possibly frustration though, so the next step will be to automate the deployment as well!
 
-## HTTPS
-
-> If you need to server over https, for example, using a `.dev` domain, follow this guide to set up nginx as a reverse proxy for your node app: https://lengstorf.com/deploy-nodejs-ssl-digitalocean/
 
 ## Next
 
