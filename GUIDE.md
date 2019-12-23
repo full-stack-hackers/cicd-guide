@@ -108,3 +108,73 @@ Then change our deploy script to now use PM2:
 Then, commit and push. And if all goes well, you should see your tests run and your app get deployed to your Digital Ocean droplet automatically. Congratualations on getting CI/CD set up for your project!
 
 Go ahead and make a change in `views/index.pug`, and save and commit it. Then push and see your changes automatically deployed.
+
+## Bonus: Workflows
+
+If you want to set up a more complex circlci config, go for it. As a starter, here is a config which uses a workflow to run some jobs. The first job, `testing`, will always run, for all branches. The second job, `deploy`, will only run for master. I also set up github branch rules under settings, to ensure that all master-branch changes come through approved pull requests, and CirlceCI-verified branches. 
+
+```yaml
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  testing:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:12.6
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/bucketlist-node-server
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+      # run tests!
+      - run: npm test
+  
+
+  deploy:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:12.6
+
+    steps:
+      
+      # deploy!
+      - run:
+          name: deploy
+          command: |
+            ssh -o "StrictHostKeyChecking no" deployer@server.bucketlist.group "cd ~/apps/server.bucketlist.group; git pull; npm i; pm2 start pm2.config.js"
+
+workflows:
+  version: 2
+  test_all_deploy_master:
+    jobs:
+      - testing
+      - deploy:
+          requires:
+            - testing
+          filters:
+            branches:
+              only: /master/
+```
