@@ -40,7 +40,7 @@ Notice now if you `ls ~/.ssh`, you will have
 id_rsa_circleci  id_rsa_circleci.pub
 ```
 
-The first file has your **private key**, and the second one has your **public key**, hence the `.pub` extension. The public key needs to be added to a `~/.ssh/authorized_users` file, so if you don't have one already, run
+The first file has your **private key**, and the second one has your **public key**, hence the `.pub` extension. The public key needs to be added to a `~/.ssh/authorized_keys` file, so if you don't have one already, run
 
 ```bash
 touch ~/.ssh/authorized_keys
